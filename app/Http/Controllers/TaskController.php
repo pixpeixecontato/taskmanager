@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Inertia\Inertia;
-use App\Models\TaskList;
 
 class TaskController extends Controller
 {
@@ -13,8 +11,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        dd(auth()->id());
-        $tasks = TaskList::where('user_id',auth()->id)->with('tasks')->get();
+       
     }
 
     /**
